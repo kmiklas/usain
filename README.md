@@ -1,6 +1,7 @@
 # usain
 
 Welcome! This program will generate dummy stock ticks at user-specified speeds.
+
 Usain Bolt set the 100m dash world record on 8/16/2009 with a time of 9.58 seconds.
 
 # Introduction
@@ -20,6 +21,7 @@ The script is quite simple to use.
 
 Here is usage copy:
 
+`
 [~/a/l/g/usain] $ ./usain
 ~ Usage: usain <(int)|bolt> <verbose|quiet>
 ~ Examples:
@@ -30,7 +32,7 @@ Here is usage copy:
   "usain 10000000 quiet" generates 10000000 ticks per second; e.g., 100ns ticks, and writes nothing
   "usain bolt" generates the fastest possible ticks for your rig. Quiet mode forced.
 ~ NOTE: Screen writing is expensive; generally, anything over 100mcs must be run in quiet mode. 
-
+`
 
 
 
