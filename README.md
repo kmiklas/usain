@@ -2,6 +2,8 @@
 
 Welcome! This program will generate dummy stock ticks at user-specified speeds.
 
+![alt text](http://www.miklas.org/images/usain_verbose.png "usain tick generator image")
+
 Usain Bolt set the 100m dash world record on 8/16/2009 with a time of 9.58 seconds.
 
 ![alt text](http://www.miklas.org/images/usain_gold.jpg "usain tick generator image")
