@@ -21,19 +21,11 @@ The only answer was to write a script to generate my own data. There, I faced no
 The script is quite simple to use.
 - For usage, just type "usain" or "./usain" if you do not have your path set.
 
-Here is usage copy:
+Having struggled for decades to make things work with little or no documentation, I really try to make things as easy as possible.
 
-> [~/a/l/g/usain] $ ./usain<br>
-> ~ Usage: usain <(int)|bolt> <verbose|quiet><br>
-> ~ Examples:<br>
->  "usain 10" generates 10 ticks per second (100ms tick time), and writes to screen<br>
->  "using 4 verbose" generates 4 ticks per second (250ms tick time), and writes to screen<br>
->  "usain 20 quiet" generates 4 ticks per second (50ms tick time), and writes nothing<br>
->  "usain 100000 quiet" generates 100000 ticks per second; e.g., 10mcs ticks, and writes nothing<br>
->  "usain 10000000 quiet" generates 10000000 ticks per second; e.g., 100ns ticks, and writes nothing<br>
->  "usain bolt" generates the fastest possible ticks for your rig. Quiet mode forced.<br>
-> ~ NOTE: Screen writing is expensive; generally, anything over 100mcs must be run in quiet mode. <br>
+Here is usage copy, which includes some helpful examples:
 
+![alt text](http://www.miklas.org/images/usain_usage.png "usain tick generator image")
 
 
 
