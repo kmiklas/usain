@@ -22,16 +22,16 @@ The script is quite simple to use.
 Here is usage copy:
 
 `
-[~/a/l/g/usain] $ ./usain
-~ Usage: usain <(int)|bolt> <verbose|quiet>
-~ Examples:
-  "usain 10" generates 10 ticks per second (100ms tick time), and writes to screen
-  "using 4 verbose" generates 4 ticks per second (250ms tick time), and writes to screen
-  "usain 20 quiet" generates 4 ticks per second (50ms tick time), and writes nothing
-  "usain 100000 quiet" generates 100000 ticks per second; e.g., 10mcs ticks, and writes nothing
-  "usain 10000000 quiet" generates 10000000 ticks per second; e.g., 100ns ticks, and writes nothing
-  "usain bolt" generates the fastest possible ticks for your rig. Quiet mode forced.
-~ NOTE: Screen writing is expensive; generally, anything over 100mcs must be run in quiet mode. 
+> [~/a/l/g/usain] $ ./usain
+> ~ Usage: usain <(int)|bolt> <verbose|quiet>
+> ~ Examples:
+>  "usain 10" generates 10 ticks per second (100ms tick time), and writes to screen
+>  "using 4 verbose" generates 4 ticks per second (250ms tick time), and writes to screen
+>  "usain 20 quiet" generates 4 ticks per second (50ms tick time), and writes nothing
+>  "usain 100000 quiet" generates 100000 ticks per second; e.g., 10mcs ticks, and writes nothing
+>  "usain 10000000 quiet" generates 10000000 ticks per second; e.g., 100ns ticks, and writes nothing
+>  "usain bolt" generates the fastest possible ticks for your rig. Quiet mode forced.
+> ~ NOTE: Screen writing is expensive; generally, anything over 100mcs must be run in quiet mode. 
 `
 
 
