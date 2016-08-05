@@ -21,7 +21,6 @@ The script is quite simple to use.
 
 Here is usage copy:
 
-`
 > [~/a/l/g/usain] $ ./usain<br>
 > ~ Usage: usain <(int)|bolt> <verbose|quiet><br>
 > ~ Examples:<br>
@@ -32,7 +31,6 @@ Here is usage copy:
 >  "usain 10000000 quiet" generates 10000000 ticks per second; e.g., 100ns ticks, and writes nothing<br>
 >  "usain bolt" generates the fastest possible ticks for your rig. Quiet mode forced.<br>
 > ~ NOTE: Screen writing is expensive; generally, anything over 100mcs must be run in quiet mode. <br>
-`
 
 
 
