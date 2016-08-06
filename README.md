@@ -41,6 +41,7 @@ This is the first commit, and it works, but there's a lot more that I want to do
 3. Rework the tick generation algorithm--I had to hack something together. Perhaps give the user the option to generate according to a mathematical model of their choice.<br>
 Side note: Initially, I innocently wrote a random number generator to produce Brownian motion, using the rand() function. This did not work! After a few seconds and a trillion ticks, USAIN flew off the handle, and quickly either spiked up to an incredible value, or went either spectacularly out of business at a price of about +/-$4000.00. I leave it to the reader to decide what this says about the theories of Browninan motion.
 4. Include a command-line parser, so that options can be specfied. Example: usain --tickspeed 10 --verbose --model stochastic. 
+5. Implement USAIN as a ticker symbol.
 
 # Usain Bolt
 
