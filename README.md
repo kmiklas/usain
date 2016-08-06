@@ -49,11 +49,11 @@ On my relatively cheap rig, which sports an Intel I7-4790K LGA1150 Core Duo proc
 
 Having struggled for decades to make things work with little or no documentation, I think that it's important to write good documentation, and make things clear and easy. I hope that this page meets with that objective.
 
-## Compiling:
+## Compiling
 
 ![alt text](http://www.miklas.org/images/usain_usage.png "usain tick generator image")
 
-## Usage:
+## Usage
 
 Here is usage copy, which includes some helpful examples. Simply type "usain" or "./usain" to view this:
 
