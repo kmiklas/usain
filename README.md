@@ -1,4 +1,4 @@
-# usain
+# USAIN
 
 Welcome! This program will generate dummy stock ticks at user-specified speeds.
 
@@ -36,10 +36,9 @@ This is the first commit, and it works, but there's a lot more that I want to do
 
 1. Implement the client-server model. Usain is the server; a client is needed to receive and process the data. This would require creating an interface between the client and server. I plan to model this afer industry-standard interfaces. I'm about 50% done with this script as of 05 Aug 2016. 
 2. Build a standard interface so that industry-standard terminals can connect to this feed (Ninjatrader&reg; Sierra Charts&reg;, even Bloomberg Terminal&reg;)
-2. Rework the tick generation algorithm. Perhaps give the user the option to generate according to a mathematical model of their choice.
-3. Include a command-line parser, so that options can be specfied. Example usain --model stochastic. 
-
-
+3. Rework the tick generation algorithm--I had to hack something together. Perhaps give the user the option to generate according to a mathematical model of their choice.<br>
+Side note: Initially, I innocently wrote a random number generator to produce Brownian motion, using the rand() function. This did not work! After a few seconds and a trillion ticks, USAIN flew off the handle, and quickly either spiked up to an incredible value, or went either spectacularly out of business at a price of about +/-$4000.00. I leave it to the reader to decide what this says about the theories of Browninan motion.
+4. Include a command-line parser, so that options can be specfied. Example: usain --tickspeed 10 --verbose --model stochastic. 
 
 # Usain Bolt
 
