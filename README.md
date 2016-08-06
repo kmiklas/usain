@@ -63,7 +63,6 @@ Here is usage copy, which includes some helpful examples. Simply type "usain" or
 
 Note that writing ticks to the screen is very expensive, and can easily slow your ticks down by a factor of 0.0001 or more. For optimal performance, quiet mode is required. Generally speaking, for tick speeds faster than 100mcs, quiet mode is required.
 
-
 # Todo
 
 This is the first commit, and it works, but there's a lot more that I want to do with this program. I'm hoping that some of you C++ gurus out there might help:
@@ -80,13 +79,13 @@ Side note: Initially, I innocently wrote a random number generator to produce Br
 
 # Legal
 
-This software is published under the MIT license, available at the following link:
+This software is published under the MIT license, available at the following link:<br>
 https://opensource.org/licenses/MIT
 
 A copy of this license is here provided as a courtesy, but may be dated. At the above link resides the document of record.
 
-The MIT License (MIT)
-Copyright (c) <year> <copyright holders>
+**The MIT License (MIT)**
+Copyright (c) 2016, Keith Miklas
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
