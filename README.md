@@ -13,9 +13,11 @@ Welcome! This program will generate dummy stock ticks at user-specified speeds.
 - [Legal](#)
 - [References](#)
 
-# Introduction
+# Screen Shot
 
 ![alt text](http://www.miklas.org/images/usain_verbose.png "usain tick generator image")
+
+# Introduction
 
 As a Financial Engineer, Computer Scientist, and Quantitative Analyist, I found myself in a dilemma.
 
