@@ -10,9 +10,10 @@ Welcome! This program will generate dummy stock ticks at user-specified speeds.
 - [Performance](#)
 - [Usage](#)
 - [Todo](#)
-- [Usain Bolt](#)
 - [Legal](#)
 - [References](#)
+- [Contact](#)
+- [Usain Bolt](#)
 
 # Screen Shot
 
