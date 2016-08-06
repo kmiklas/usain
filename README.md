@@ -19,7 +19,9 @@ Thus, was born Usain; and here it is for you to enjoy. John 3:16.
 
 # Performance
 
-In addition to avoiding exchange fees and regulations, Usain produces speeds far beyond that of almost all professional data feeds--even those leveraging computers collocated at exchanges. With the possible exception of those able to run their scripts *directly on exchange computers*--which is probably illegal, unfathomably costly, or both--Usain beats them all: this is *low* low latency. Why? Because it runs locally on your machine; no fiber, cabling, ethernet, NIC, and all the associated delays.
+In addition to avoiding exchange fees and regulations, Usain produces speeds far beyond that of almost all professional data feeds--even those leveraging computers collocated at exchanges. With the possible exception of those able to run their scripts *directly on exchange computers*--which is probably illegal, unfathomably costly, or both--Usain beats them all: this is *low* low latency.
+
+Why? Because it runs locally on your machine; no fiber, cabling, ethernet, NIC, and all the associated delays.
 
 On my relatively cheap rig, which sports an Intel I7-4790K LGA1150 Core Duo processor, ASUS Z-97 Pro Mobo, and Centos 7 Linux, I get tick speeds of about 1.5 nanoseconds--without any real optimization effort.
 
