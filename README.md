@@ -15,9 +15,15 @@ What to do? I had to remain in compliance with regulations; however, a data feed
 
 The only answer was to write a program to generate my own data. There, I faced no restrictions, and could write analytic algorithms to my heart's content.
 
-In addition to avoiding exchange fees and regulations, the speeds that Usain produces are far beyond that of most professional data feeds. On an Intel I7-4790K LGA1150 Core Duo processor, ASUS Z-97 Pro Mobo, I can get tick speeds of about 1.5 nanoseconds. This beats pretty much anything--even those colocated at the exchanges--With the exception of those able to run their scripts directly on exchange hardware. This provides the ability to develop low-latency algorithms without stepping on any toes.
-
 Thus, was born Usain; and here it is for you to enjoy. John 3:16.
+
+# Performance
+
+In addition to avoiding exchange fees and regulations, Usain produces speeds far beyond that of almost all professional data feeds--even those collocated at exchanges. With the possible exception of those able to run their scripts directly on exchange computers, Usain beats them all: this is *low* low latency. Why? Because it runs locally on your machine; no fiber, cabling, ethernet, NIC, and all the associated delays.
+
+On my relatively cheap rig, which sports an Intel I7-4790K LGA1150 Core Duo processor, ASUS Z-97 Pro Mobo, and Centos 7 Linux, I get tick speeds of about 1.5 nanoseconds--without any real optimization effort.
+
+![alt text](http://www.miklas.org/images/usain_silent.png "usain tick generator image")
 
 # Usage
 
