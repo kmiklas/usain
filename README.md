@@ -51,7 +51,9 @@ Having struggled for decades to make things work with little or no documentation
 
 ## Compiling
 
-![alt text](http://www.miklas.org/images/usain_usage.png "usain tick generator image")
+- A makefile has been provided. Type "make -B" as shown:
+
+![alt text](http://www.miklas.org/images/usain_compile.png "usain tick generator image")
 
 ## Usage
 
