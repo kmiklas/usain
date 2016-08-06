@@ -26,7 +26,9 @@ The script is quite simple to use.
 
 Having struggled for decades to make things work with little or no documentation, I really try to make things as easy as possible.
 
-Here is usage copy, which includes some helpful examples:
+Note that writing ticks to the screen is very expensive, and can easily slow your ticks down by a factor of 0.0001 or more. For optimal performance, quiet mode is required. Generally speaking, for tick speeds faster than 100mcs, quiet mode is required.
+
+Here is usage copy, which includes some helpful examples.
 
 ![alt text](http://www.miklas.org/images/usain_usage.png "usain tick generator image")
 
