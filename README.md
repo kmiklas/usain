@@ -63,14 +63,7 @@ This is the first commit, and it works, but there's a lot more that I want to do
 4. Rework the tick generation algorithm--I had to hack something together. Perhaps give the user the option to generate according to a mathematical model of their choice.<br>
 Side note: Initially, I innocently wrote a random number generator to produce Brownian motion, using the rand() function. This did not work! After a few seconds and a trillion ticks, USAIN flew off the handle, and quickly either spiked up to an incredible value, or went either spectacularly out of business at a price of about +/-$4000.00. I leave it to the reader to decide what this says about the theories of Browninan motion.
 5. Include a command-line parser, so that options can be specfied. Example: usain --tickspeed 10 --verbose --model stochastic.
-
-# Usain Bolt
-
-Usain Bolt is, at this time, the fastest human in the world.
-
-He set the 100m dash world record on 8/16/2009 with a time of 9.58 seconds.
-
-![alt text](http://www.miklas.org/images/usain_gold.jpg "usain tick generator image")
+6. I suppose, in theory, I could run this on my Web server and broadcast data out to the world. Then people could simply install the Usain client, and not have to generate data locally. This would surely get a friendly call--and a large bill--from my hosting provider, so I'm not doing that right now. If you have an answer to this problem, I'm open to it.
 
 # Legal
 
@@ -94,7 +87,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 2. Nasdaq fee schedule: http://nasdaqtrader.com/Trader.aspx?id=DPUSdata
 3. "U.S. Brokers Face Big Rise in Exchange Fees Thanks to SEC Ruling" [Bloomberg, July 31 2015] http://www.bloomberg.com/news/articles/2015-07-31/u-s-brokers-face-big-rise-in-exchange-fees-thanks-to-sec-ruling
 
+# Contact
 
+Feel free to email me: keith@algorithmicquantitative.com.
+
+# Usain Bolt
+
+Usain Bolt is, at this time, the fastest human in the world.
+
+He set the 100m dash world record on 8/16/2009 with a time of 9.58 seconds.
+
+![alt text](http://www.miklas.org/images/usain_gold.jpg "usain tick generator image")
 
 
   
