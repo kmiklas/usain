@@ -41,18 +41,22 @@ On my relatively cheap rig, which sports an Intel I7-4790K LGA1150 Core Duo proc
 
 ![alt text](http://www.miklas.org/images/usain_silent.png "usain tick generator image")
 
-# Usage
+# Compiling and Usage
 
-The script is quite simple to use.
-- For usage, just type "usain" or "./usain" if you do not have your path set.
+Having struggled for decades to make things work with little or no documentation, I think that it's important to write good documentation, and make things clear and easy. I hope that this page meets with that objective.
 
-Having struggled for decades to make things work with little or no documentation, I really try to make things as easy as possible.
+## Compiling:
+
+![alt text](http://www.miklas.org/images/usain_usage.png "usain tick generator image")
+
+## Usage:
+
+Here is usage copy, which includes some helpful examples. Simply type "usain" or "./usain" to view this:
+
+![alt text](http://www.miklas.org/images/usain_usage.png "usain tick generator image")
 
 Note that writing ticks to the screen is very expensive, and can easily slow your ticks down by a factor of 0.0001 or more. For optimal performance, quiet mode is required. Generally speaking, for tick speeds faster than 100mcs, quiet mode is required.
 
-Here is usage copy, which includes some helpful examples.
-
-![alt text](http://www.miklas.org/images/usain_usage.png "usain tick generator image")
 
 # Todo
 
