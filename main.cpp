@@ -19,15 +19,15 @@
 const std::string version("1.2.1");
 const std::string date("05 Aug 2016");
 
-class TickerHound {
+class Usain {
 public:
-	TickerHound():price_(100),m_(100),move_(0) {
+	Usain():price_(100),m_(100),move_(0) {
 		srand(time(NULL));
 	};
-	TickerHound(int price):price_(price),m_(price),move_(0) {
+	Usain(int price):price_(price),m_(price),move_(0) {
 		srand(time(NULL));
 	};
-	~TickerHound() {};
+	~Usain() {};
 	double tick();
 private:
 	double 		price_;
@@ -36,7 +36,7 @@ private:
 };
 
 
-double TickerHound::tick() {
+double Usain::tick() {
 	double move_;
 	move_ = ((double)((rand() % 101) - 50))/1000;
 	if (price_ < m_) {
@@ -53,7 +53,7 @@ double TickerHound::tick() {
 }
 
 int main(int argc, char** argv) {
-	TickerHound hound, decoy;
+	Usain hound, decoy;
 	long long int specifiedTicksPerSecond(0), maxTicksPerSecond(0), n(0), d(0), delay(0);
 	double a(0), timePerTick(0), throttle(0);
 	bool verbose(true);
@@ -69,7 +69,7 @@ int main(int argc, char** argv) {
 		std::cout << "~ NOTE: Screen writing is expensive; generally, anything over 100mcs must be run in quiet mode. ";
 
 	} else {
-		std::cout << "~ tickerHound v" << version << ", " << date << std::endl;
+		std::cout << "~ usain v" << version << ", " << date << std::endl;
 		std::cout << "~ https://opensource.org/licenses/MIT" << std::endl;
 
 		// Take 1000 tick measurements for an educated guess at initial throttling
