@@ -65,6 +65,7 @@ This is the first commit, and it works, but there's a lot more that I want to do
 Side note: Initially, I innocently wrote a random number generator to produce Brownian motion, using the rand() function. This did not work! After a few seconds and a trillion ticks, USAIN flew off the handle, and quickly either spiked up to an incredible value, or went either spectacularly out of business at a price of about +/-$4000.00. I leave it to the reader to decide what this says about the theories of Browninan motion.
 5. Include a command-line parser, so that options can be specfied. Example: usain --tickspeed 10 --verbose --model stochastic.
 6. I suppose, in theory, I could run this on my Web server and broadcast data out to the world. Then people could simply install the Usain client, and not have to generate data locally. This would surely get a friendly call--and a large bill--from my hosting provider, so I'm not doing that right now. If you have an answer to this problem, I'm open to it.
+7. There's lots more, but that's enough for now.
 
 # Legal
 
