@@ -2,10 +2,19 @@
 
 Welcome! This program will generate dummy stock ticks at user-specified speeds.
 
-![alt text](http://www.miklas.org/images/usain_verbose.png "usain tick generator image")
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
+- [USAIN](#)
+- [Introduction](#)
+- [Performance](#)
+- [Usage](#)
+- [Todo](#)
+- [Usain Bolt](#)
+- [References](#)
 
 # Introduction
+
+![alt text](http://www.miklas.org/images/usain_verbose.png "usain tick generator image")
 
 As a Financial Engineer, Computer Scientist, and Quantitative Analyist, I found myself in a dilemma.
 
