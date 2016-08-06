@@ -4,15 +4,13 @@ Welcome! This program will generate dummy stock ticks at user-specified speeds.
 
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
 - [USAIN](#)
 - [Screen Shot](#)
 - [Introduction](#)
 - [Performance](#)
 - [Compiling and Usage](#)
-	- [Compiling:](#)
-	- [Usage:](#)
+	- [Compiling](#)
+	- [Usage](#)
 - [Todo](#)
 - [Legal](#)
 - [References](#)
