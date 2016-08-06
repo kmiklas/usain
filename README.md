@@ -5,6 +5,7 @@ Welcome! This program will generate dummy stock ticks at user-specified speeds.
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
 - [USAIN](#)
+- [Screen Shot](#)
 - [Introduction](#)
 - [Performance](#)
 - [Usage](#)
@@ -57,11 +58,11 @@ Here is usage copy, which includes some helpful examples.
 This is the first commit, and it works, but there's a lot more that I want to do with this program. I'm hoping that some of you C++ gurus out there might help:
 
 1. Implement the client-server model. Usain is the server; a client is needed to receive and process the data. This would require creating an interface between the client and server. I plan to model this afer industry-standard interfaces. I'm about 50% done with this script as of 05 Aug 2016. 
-2. Build a standard interface so that industry-standard terminals can connect to this feed (Ninjatrader&reg; Sierra Charts&reg;, even Bloomberg Terminal&reg;)
-3. Rework the tick generation algorithm--I had to hack something together. Perhaps give the user the option to generate according to a mathematical model of their choice.<br>
+2. Build some clients for data analysis. I intend to provide a simple example that pushes Usain data into a circular FIFO, and computes basic statistical information: mean, median, mode, standard deviation (aka volatility), skew, moments, etc.
+3. Build a standard interface so that industry-standard terminals can connect to this feed (Ninjatrader&reg; Sierra Charts&reg;, even Bloomberg Terminal&reg;). Part of this would entail creating USAIN as a full-fledged ticker symbol, with historical data.
+4. Rework the tick generation algorithm--I had to hack something together. Perhaps give the user the option to generate according to a mathematical model of their choice.<br>
 Side note: Initially, I innocently wrote a random number generator to produce Brownian motion, using the rand() function. This did not work! After a few seconds and a trillion ticks, USAIN flew off the handle, and quickly either spiked up to an incredible value, or went either spectacularly out of business at a price of about +/-$4000.00. I leave it to the reader to decide what this says about the theories of Browninan motion.
-4. Include a command-line parser, so that options can be specfied. Example: usain --tickspeed 10 --verbose --model stochastic. 
-5. Implement USAIN as a ticker symbol.
+5. Include a command-line parser, so that options can be specfied. Example: usain --tickspeed 10 --verbose --model stochastic.
 
 # Usain Bolt
 
