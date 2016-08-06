@@ -30,6 +30,17 @@ Here is usage copy, which includes some helpful examples:
 
 ![alt text](http://www.miklas.org/images/usain_usage.png "usain tick generator image")
 
+# Todo
+
+This is the first commit, and it works, but there's a lot more that I want to do with this program. I'm hoping that some of you C++ gurus out there might help:
+
+1. Implement the client-server model. Usain is the server; a client is needed to receive and process the data. This would require creating an interface between the client and server. I plan to model this afer industry-standard interfaces. I'm about 50% done with this script as of 05 Aug 2016. 
+2. Build a standard interface so that industry-standard terminals can connect to this feed (Ninjatrader&reg; Sierra Charts&reg;, even Bloomberg Terminal&reg;)
+2. Rework the tick generation algorithm. Perhaps give the user the option to generate according to a mathematical model of their choice.
+3. Include a command-line parser, so that options can be specfied. Example usain --model stochastic. 
+
+
+
 # Usain Bolt
 
 Usain Bolt is, at this time, the fastest human in the world.
