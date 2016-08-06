@@ -61,6 +61,9 @@ He set the 100m dash world record on 8/16/2009 with a time of 9.58 seconds.
 
 # References
 
+1. NYSE fee schedule: http://www.nyxdata.com/Docs/Market-Data/Pricing
+2. Nasdaq fee schedule: http://nasdaqtrader.com/Trader.aspx?id=DPUSdata
+3. "U.S. Brokers Face Big Rise in Exchange Fees Thanks to SEC Ruling" [Bloomberg, July 31 2015] http://www.bloomberg.com/news/articles/2015-07-31/u-s-brokers-face-big-rise-in-exchange-fees-thanks-to-sec-ruling
 
 
 
