@@ -1,6 +1,6 @@
 # USAIN
 
-Welcome! This program will generate dummy stock ticks at user-specified speeds.
+Welcome to Usain! A Low-Latency Market Data Tick Generation Program
 
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
