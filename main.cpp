@@ -69,11 +69,11 @@ int main(int argc, char** argv) {
 		std::cout << "~ https://opensource.org/licenses/MIT" << std::endl;
 
 		// Take 1000000 tick measurements for an reasonable guess at max tick speed
-		std::chrono::time_point<std::chrono::system_clock> start = std::chrono::high_resolution_clock::now();
+		std::chrono::time_point<std::chrono::high_resolution_clock> start = std::chrono::high_resolution_clock::now();
 		for (long int i=0; i<1000000; ++i) {
 				u.tick();
 		}
-		std::chrono::time_point<std::chrono::system_clock> end = std::chrono::high_resolution_clock::now();
+		std::chrono::time_point<std::chrono::high_resolution_clock> end = std::chrono::high_resolution_clock::now();
 		std::chrono::duration<double> tickTime = (end - start)/1000000;
 		int maxTicksPerSecond = (int)(round(1/tickTime.count()));
 
