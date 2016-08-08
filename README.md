@@ -41,7 +41,7 @@ Why? Because it runs locally on your machine; no fiber, cabling, ethernet, NIC, 
 
 On my relatively cheap rig, which sports an Intel I7-4790K LGA1150 Core Duo processor, ASUS Z-97 Pro Mobo, and Centos 7 Linux, I get tick speeds of about 1.5 nanoseconds--without any real optimization effort.
 
-![alt text](http://www.miklas.org/images/usain_silent.png "usain tick generator image")
+![alt text](http://www.miklas.org/images/usain_quiet.png "usain tick generator image")
 
 # Compiling and Usage
 
