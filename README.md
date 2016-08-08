@@ -19,7 +19,7 @@ Welcome to Usain! A Low-Latency Market Data Tick Generation Program
 
 # Screen Shot
 
-![alt text](http://www.miklas.org/images/usain_verbose.png "usain tick generator image")
+
 
 # Introduction
 
