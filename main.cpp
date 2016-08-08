@@ -14,10 +14,9 @@
 #include <cmath>
 #include <chrono>
 #include <cstring>
-
 #define _USE_MATH_DEFINES
-const std::string version("1.2.1");
-const std::string date("05 Aug 2016");
+const std::string version("2.1.1");
+const std::string date("08 Aug 2016");
 
 class Usain {
 public:
@@ -34,8 +33,6 @@ private:
 	double 		m_; 	// Measure of central tendency.
 	double 		move_;
 };
-
-
 double Usain::tick() {
 	double move_;
 	move_ = ((double)((rand() % 101) - 50))/1000;
@@ -53,11 +50,11 @@ double Usain::tick() {
 }
 
 int main(int argc, char** argv) {
-	Usain hound, decoy;
-	long long int specifiedTicksPerSecond(0), maxTicksPerSecond(0), n(0), d(0), delay(0);
+	Usain u, decoy;
+	long long int ticksPerSecond(0), maxTicksPerSecond(0), n(0), d(0), delay(0);
 	double a(0), timePerTick(0), throttle(0);
 	bool verbose(true);
-	if (argc == 1) {
+	if (argc == 1) { //usage
 		std::cout << "~ Usage: usain <(int)|bolt> <verbose|quiet>" << std::endl;
 		std::cout << "~ Examples:" << std::endl;
 		std::cout << "  \"usain 10\" generates 10 ticks per second (100ms tick time), and writes to screen" << std::endl;
@@ -67,37 +64,31 @@ int main(int argc, char** argv) {
 		std::cout << "  \"usain 10000000 quiet\" generates 10000000 ticks per second; e.g., 100ns ticks, and writes nothing" << std::endl;
 		std::cout << "  \"usain bolt\" generates the fastest possible ticks for your rig. Quiet mode forced." << std::endl;
 		std::cout << "~ NOTE: Screen writing is expensive; generally, anything over 100mcs must be run in quiet mode. ";
-
 	} else {
 		std::cout << "~ usain v" << version << ", " << date << std::endl;
 		std::cout << "~ https://opensource.org/licenses/MIT" << std::endl;
 
-		// Take 1000 tick measurements for an educated guess at initial throttling
-		// It's dynamically adjusted anyway, but we try to get close
-		auto dummyStart = std::chrono::high_resolution_clock::now();
-		auto dummyEnd = std::chrono::high_resolution_clock::now();
-		std::chrono::duration<double> dummyTickTime = (dummyEnd - dummyStart);	
-		double dummyTick;
-		auto start = std::chrono::high_resolution_clock::now();
-		for (int i=0; i<1000; ++i) {
-				decoy.tick();
+		// Take 1000000 tick measurements for an reasonable guess at max tick speed
+		std::chrono::time_point<std::chrono::system_clock> start = std::chrono::high_resolution_clock::now();
+		for (long int i=0; i<1000000; ++i) {
+				u.tick();
 		}
-		auto end = std::chrono::high_resolution_clock::now();
-		std::chrono::duration<double> tickTime = (end - start)/1000;
+		std::chrono::time_point<std::chrono::system_clock> end = std::chrono::high_resolution_clock::now();
+		std::chrono::duration<double> tickTime = (end - start)/1000000;
 		int maxTicksPerSecond = (int)(round(1/tickTime.count()));
 
 		// set ticks per second
-
 		if (!std::strcmp(argv[1],"bolt") || !std::strcmp(argv[1],"BOLT")) {
-			specifiedTicksPerSecond = maxTicksPerSecond; // "I feel the need.. the need, for speed"
-			verbose = false;
+			ticksPerSecond = maxTicksPerSecond; // "I feel the need.. the need, for speed"
 		} else {
-			specifiedTicksPerSecond = atoi(argv[1]);
+			ticksPerSecond = atoi(argv[1]);
 		}
+	    std::chrono::duration<double> desiredTickDuration(1./ticksPerSecond);
 		std::cout << "~ Maximum ticks your rig can generate in one second: " << std::fixed << maxTicksPerSecond << std::endl;
-		std::cout << "~ Your specified ticks per second: " << specifiedTicksPerSecond << std::endl;
+		std::cout << "~ Your specified ticks per second: " << ticksPerSecond << std::endl;
+	    std::cout << "~ Time per tick, in seconds: " << desiredTickDuration.count() << std::endl;
+		std::cout << "~ NOTE: Screen writing is expensive; generally, anything over 100mcs must be run in quiet mode. " << std::endl;
 		std::cout << "~ Usain Bolt set the 100m dash world record on 8/16/2009 with a time of 9.58 seconds." << std::endl << std::endl;
-
 		// set quiet or verbose mode
 		if (argc > 2) {
 			verbose = (!strcmp(argv[2],"quiet")) ? false : true;
@@ -105,34 +96,33 @@ int main(int argc, char** argv) {
 		if (!verbose) {
 			std::cout << "~ Quiet mode is on. Generating ticks..." << std::endl;
 		}
-		// We calculate dummy ticks to pace ticks according to User specification
-		// Another alternative would be to specify a <chrono> time interval here.
-		timePerTick = (1./specifiedTicksPerSecond);
-		int sleepTicks = trunc(maxTicksPerSecond/specifiedTicksPerSecond);
-	    double adjustment(0);
-		while(1) {
-			start = std::chrono::high_resolution_clock::now();
-		    for (int i=0; i<sleepTicks; ++i) {
-		    	decoy.tick();
-	   		}
-			end = std::chrono::high_resolution_clock::now();
-			std::chrono::duration<double> tickTime = end - start;
+		std::chrono::high_resolution_clock::time_point prevTickTime = std::chrono::high_resolution_clock::now();
+		std::chrono::time_point<std::chrono::high_resolution_clock, std::chrono::duration<double> > nextTickTime = std::chrono::high_resolution_clock::now() + desiredTickDuration;
+	    std::chrono::duration<double, std::ratio<1, 1>> actualTickDuration(0.);
+	    while(1) {
+	    	prevTickTime = std::chrono::high_resolution_clock::now();
+	    	while (std::chrono::high_resolution_clock::now() < nextTickTime) {
+	    		// wait...
+	    	};
+	    	// A little tuning
+	    	actualTickDuration = std::chrono::high_resolution_clock::now() - prevTickTime;
+	    	if (actualTickDuration > desiredTickDuration) { // A little slow; subtract the difference
+		    	nextTickTime = std::chrono::high_resolution_clock::now() + desiredTickDuration - (0.5 * (actualTickDuration - desiredTickDuration));
+	    	} else { // A little fast; add the difference
+		    	nextTickTime = std::chrono::high_resolution_clock::now() + desiredTickDuration + (0.5 * (desiredTickDuration - actualTickDuration));
+	    	}
 			if (verbose) {
-		   		std::cout << std::setprecision(2) << hound.tick() << "\t\t"; // price
-				std::cout << std::setprecision(12) << tickTime.count() << std::endl; // time in seconds
-			}
-			throttle = (1./specifiedTicksPerSecond) - tickTime.count();
-			sleepTicks = sleepTicks + (int)(throttle * sleepTicks);
-			if ((verbose) && (n > 25)) {
-				std::cout << "_price\t\t_tick_time_in_seconds" << std::endl;
-				n = 0;
+			   	std::cout << std::setprecision(2) << u.tick() << "\t\t"; // price
+				std::cout << std::setprecision(12) << (std::chrono::high_resolution_clock::now().time_since_epoch().count() - prevTickTime.time_since_epoch().count()) << std::endl; // time in seconds
+				if (n>20) {
+					std::cout << "_price\t\t_tick_time_in_nanoseconds" << std::endl;
+					n=0;
+				}
 			} else {
-				++n;			
+				u.tick();
 			}
-
-	   	}
-		std::cout << std::endl;
-		std::cout << "Process running, ticks being generated on port XXXX. Press Ctrl+c to halt." << std::endl;
+	    	++n;
+	    }
 	}
 	std::cout << "\n";
 	return(0);
